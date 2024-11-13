@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+         
+         <!--Improving this cheat sheet:
+         1 - More CSS Styling.
+         2 - Adding Javascript (once I learn it)
+         3 - A floating "Back to top" button that follows you as you scroll
+         -->
+    <body>
+        <header>
+            <h1> Full Stack Engineer Cheat Sheet!</h1>
+            <h3>By: Rainer Saller</h3> 
+            <nav id="top"> <!--Navigation bar HTML-->
+                <h4 class="navtitle">HTML Topics</h4>
+                    <ul>
+                        <li><a href=#table-tags>Table Tags</a></li>
+                        <li><a href=#tableattr>Table Attributes</a> </li>
+                        <li><a href=#semantic>Semantic HTML</a> </li>
+                        <li><a href=#genhtml>General HTML</a></li>
+                        <li><a href=#genattr>General HTML Attributes</a></li>
+                    </ul>
+                <h4 class="navtitle">CSS Topics</h4>
+                    <ul>
+                        <li><a href=#selectors>General Selectors</a></li>
+                        <li><a href=#intvis>Intro to Visual Rules</a></li>
+                        <li><a href=#dispos>Display & Positioning</a></li>
+                        <li><a href=#boxmod>The Box Model</a></li>
+                        <li><a href=#impcss>Improved CSS</a></li>
+                    </ul>
+            </nav>
+            <hr><br>
+        </header>
+
+        <!-- HTML Cheat Sheet Start-->
+         
+        <h2> HTML Tags and Attributes </h2>
+        <h3 class="table-title" id="table-tags"> Table Tags</h3>
+        <table>
+            <thead> <!--HTML Table Tags Table-->
+                <tr>
+                    <th>Tag </th>
+                    <th>Name </th>
+                    <th>Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <span class="code"> &lt;table&gt; &lt;/table&gt;</span></td>
+                    <td>Table</td>
+                    <td>The container/wrapper for all of the data on a table.</td>
+                </tr>
+                <tr>
+                    <td> <span class="code"> &lt;thead&gt; &lt;/thead&gt;</span></td>
+                    <td>Table header</td>
+                    <td>The tag used to define the column headers in a table.</td>
+                </tr>
+                <tr>
+                    <td> <span class="code"> &lt;th&gt; &lt;/th&gt;</span></td>
+                    <td>Th</td>
+                    <td> The tag used to format data in the column header in a table.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;tfoot&gt; &lt;/tfoot&gt;</span></td>
+                    <td>Table Footer</td>
+                    <td> The tag used to define the bottom row of a table.</td>
+                </tr>
+                <tr>
+                    <td><span class="code"> &lt;tbody&gt; &lt;/tbody&gt;</span></td>
+                    <td>Table body</td>
+                    <td>The tag used to define the main body in a table.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;tr&gt; &lt;/tr&gt;</span></td>
+                    <td>Table Row</td>
+                    <td> The tag used to add in a row on a Table.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;td&gt; &lt;/td&gt;</span></td>
+                    <td>Table Data</td>
+                    <td> The tag used to add data into each table row (nested within each "tr").</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="table-title" id="tableattr"> Table Attributes</h3>
+        <table>
+            <thead> <!--HTML Table Attributes Table-->
+                <tr>
+                    <th>Attribute </th>
+                    <th>Name </th>
+                    <th>Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="code">colspan</span></td>
+                    <td>Column Span</td>
+                    <td> Makes table data span multiple columns on a table.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">rowspan</span></td>
+                    <td> Row Span</td>
+                    <td>Makes table data span multiple cells in a table row.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="table-title" id="semantic">Semantic HTML</h3>
+        <table> <!--Semantic HTML Table Start-->
+            <thead>
+                <th>Tag </th>
+                <th>Name </th>
+                <th>Description </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <span class="code">&lt;header&gt; &lt;/header&gt;</span> </td>
+                    <td> Header</td>
+                    <td> Used for navigational links or introductory content.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;nav&gt; &lt;/nav&gt;</span></td>
+                    <td> Nav</td>
+                    <td> Used to define blocks of navigational links.</td>
+                </tr>
+                <tr>
+                    <td><span class="code"> &lt;main&gt; &lt;/main&gt;</span></td>
+                    <td>Main</td>
+                    <td> Used to define where the dominant type of content is on a webpage.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;footer&gt; &lt;/footer&gt;</span></td>
+                    <td> Footer</td>
+                    <td> Denotes the bottom of a webpage; usually contains contact info, copyright info, etc.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;article&gt; &lt;/article&gt;</span></td>
+                    <td> Article</td>
+                    <td> Defines content that can stand on its own. Can include: articles, blogs, etc.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;section&gt; &lt;/section&gt;</span></td>
+                    <td>Section</td>
+                    <td> Defines the start of a section, chapter, or groups parts of a webpage with similar themes.</td>
+                </tr>
+                <tr>
+                    <td><span class="code"> &lt;aside&gt; &lt;/aside&gt;</span></td>
+                    <td> Aside</td>
+                    <td> Used for contant this is relevant, but not necessary to the primary content of a webpage.</td>
+                </tr>
+                <tr>
+                    <td><span class="code"> &lt;figure&gt; &lt;/figure&gt;</span></td>
+                    <td> Figure</td>
+                    <td>Used to encapsulate image tags in your HTML code.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;figcaption&gt; &lt;/figcaption&gt;</span></td>
+                    <td> Figure Caption</td>
+                    <td> Used to put a caption on images on your website. It's special because it ensures that the text sticks to the image rather than change when the format changes.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;audio&gt; &lt;/audio&gt;</span></td>
+                    <td> Audio</td>
+                    <td> Used to embed audio files into your webpage.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;video&gt; &lt;/video&gt;</span></td>
+                    <td> Video</td>
+                    <td> Used to embed videos into your webpage.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;embed&gt;</span></td>
+                    <td>Embed*</td>
+                    <td><strong>*This is legacy code. Do not use.*</strong> A self-closing tag that can embed any external content onto your webpage.</td>
+            </tbody>
+        </table>
+        <h3 class="table-title" id="genhtml">General HTML Tags</h3>
+        <table> <!--General HTML Tags Table Start-->
+            <thead>
+                <th>Tag</th>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="code">&lt;!--DOCTYPE html--&gt;</span></td>
+                    <td> Document Type: HTML</td>
+                    <td>Used to tell your web browser what kind of code to expect. In this case, HTML.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;html&gt; &lt;/html&gt;</span></td>
+                    <td> HTML</td>
+                    <td> Used to denote where your HTML code will be</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;body&gt; &lt;/body&gt;</span></td>
+                    <td>Body</td>
+                    <td>Used to declare where your main HTML code will be in.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;h1&gt; &lt;/h1&gt;</span></td>
+                    <td>Header 1</td>
+                    <td>Used to display text in a header type font. Goes from h1 -&gt; h6. H1 is largest, h6 is the smallest.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;p&gt; &lt;/p&gt;</span></td>
+                    <td>Paragraph</td>
+                    <td> HTML tag that lets you put text onto your webpage.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;div&gt; &lt;/div&gt;</span></td>
+                    <td> Division</td>
+                    <td>Used to create sections of similar content on a webpage. The non-semantic HTML version of "section".</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;span&gt; &lt;/span&gt;</span></td>
+                    <td>Span</td>
+                    <td>Used to separate a section of text so that you can style particular parts of it.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;em&gt; &lt;/em&gt;</span></td>
+                    <td> Emphasize</td>
+                    <td> Used to Italicize text.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;strong&gt; &lt;/strong&gt;</span></td>
+                    <td>Bold</td>
+                    <td>Used to bold text.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;ul&gt; &lt;/ul&gt;</span></td>
+                    <td>Unordered List</td>
+                    <td>Used to start & contain all of the text in a bullet-point style list.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;ol&gt; &lt;/ol&gt;</span></td>
+                    <td>Ordered List</td>
+                    <td>Used to start & contain all of the text in a numbered list.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;li&gt; &lt;/li&gt;</span></td>
+                    <td>Add to List</td>
+                    <td> Used inside of &lt;ul&gt; or &lt;ol&gt; to add text or data to the respective list type.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">&lt;a&gt; &lt;/a&gt;</span></td>
+                    <td> Anchor Tag</td>
+                    <td>Used to create a link on your webpage/website. In between &lt;a&gt; & &lt;/a&gt;, you can put in text, or an image.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="table-title" id="genattr">General HTML Attributes</h3>
+        <table> <!--General HTML Attributes Table Start-->
+            <thead>
+                <th> Attribute </th>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="code">class</span></td>
+                    <td>Class</td>
+                    <td>Class gives lines of code an identity that does not have to be unique.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">id</span></td>
+                    <td>ID</td>
+                    <td>Used to give a singular line or section of code a unique identity.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">src</span></td>
+                    <td>Source</td>
+                    <td>Used to attach a URL to an anchor tag, image, video, or audio file.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">href</span></td>
+                    <td>Href</td>
+                    <td>used to link internally to your webpage.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">alt</span></td>
+                    <td> Alternative Text</td>
+                    <td>Used to display alternative text in case an image, video, or audio file cannot play.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">target</span></td>
+                    <td>Target</td>
+                    <td>Used to determine whether a link sends you to another tab or not.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- CSS Cheat Sheet Start -->
+
+    <h2>CSS Cheat Sheet</h2>
+    <h3 class="table-title" id="selectors">CSS Selectors</h3>
+    <table class="tablecss"> <!--General CSS Selectors Table Start-->
+        <thead class="thcss">
+            <th> Selector & Name</th>
+            <th> Targeting</th>
+            <th> Code Example</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tdcss"><span class="code">Asterisk: "*"</span></td>
+                <td class="tdcss">Targets everything</td>
+                <td class="tdcss">* {<br>text-align: center;<br>}</td>
+            </tr>
+            <tr>
+                <td class="tdcss"><span class="code">ID: "#"</span></td>
+                <td class="tdcss">targets everything with a specified HTML ID</td>
+                <td class="tdcss">#identity {<br> text-decoration: underline;<br>}</td>
+            </tr>
+            <tr>
+                <td class="tdcss"><span class="code">Class: "."</span></td>
+                <td class="tdcss">targets everything with a specified HTML class</td>
+                <td class="tdcss">.class {<br> line-spacing: 2em;<br>}</td>
+            </tr>
+            <tr>
+                <td class="tdcss"><span class="code">HTML Attributes: "[]"</span></td>
+                <td class="tdcss">targets specific HTML attributes, or tags with a specific attribute.</td>
+                <td class="tdcss">a[href] {<br> color: purple;<br>}</td>
+            </tr>
+            <tr>
+                <td class="tdcss"><span class="code">HTML tags: "[html tag]"</span></td>
+                <td class="tdcss">targets HTML tags.</td>
+                <td class="tdcss">h1 {<br> color: purple;<br>}</td>
+            </tr>
+            <tr>
+                <td class="tdcss"><span class="code">Stacking Selectors: ","</span></td>
+                <td class="tdcss">Allows you to target multiple tags with the same CSS code.</td>
+                <td class="tdcss">h1, p, li {<br> color: purple;<br>}</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="table-title" id="intvis">Intro to Visual Rules</h3>
+        <table class="tablecss"> <!--Intro to Visual Rules Table Start-->
+            <thead class="thcss">
+                <th>Declaration </th>
+                <th>Description </th>
+                <th>Code Example </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tdcss"><span class="code">font-family</span> </td>
+                    <td class="tdcss">Changes the type of font used (AKA Typeface) </td>
+                    <td class="tdcss">p {<br> font-family: Arial;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">font-size</span> </td>
+                    <td class="tdcss">Changes the size of the current typeface. </td>
+                    <td class="tdcss">p {<br> font-size: 18px;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">font-weight</span> </td>
+                    <td class="tdcss">Makes text bold, or italicized, or some other property.</td>
+                    <td class="tdcss"> p {<br> font-weight: bold;<br>}</td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">text-align</span> </td>
+                    <td class="tdcss">Changes the alignment of text. </td>
+                    <td class="tdcss">p {<br> text-align: center;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">text-transform</span> </td>
+                    <td class="tdcss">Changes font appearance (e.g., uppercase, lowercase, etc.). </td>
+                    <td class="tdcss">p {<br> text-transform: uppercase;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">letter-spacing</span> </td>
+                    <td class="tdcss">Alters the spacing in-between letters. </td>
+                    <td class="tdcss">p {<br> letter-spacing: 10px;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">background-color</span> </td>
+                    <td class="tdcss">Changes the background colour of an element. </td>
+                    <td class="tdcss">p {<br> background-color: orangered;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">color</span> </td>
+                    <td class="tdcss">Changes the foreground colour of an element. </td>
+                    <td class="tdcss">p {<br> color: red;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">opacity</span> </td>
+                    <td class="tdcss">Measured from 0 (transparent) to 1 (opaque), opacity deals with how visible an element is. </td>
+                    <td class="tdcss">p {<br> opacity: 0.5;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">background-image</span> </td>
+                    <td class="tdcss">Adds an image to the background of your website, or element. Can use a URL, or src a relative path if it's a local file. </td>
+                    <td class="tdcss">body {<br> background-image: url(' ');<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">important</span> </td>
+                    <td class="tdcss">CSS declaration that overrides ANY style, regardless of how specific. Use sparingly, if at all. </td>
+                    <td class="tdcss">p {<br> font-family: Arial !important;<br>} </td>
+                </tr>
+            </tbody>
+        </table>
+    <h3 class="table-title" id="dispos">Display & Positioning</h3>
+        <table class="tablecss"> <!--CSS Display & Positioning Table Start-->
+            <thead class="thcss">
+                <th>Property/Declaration</th>
+                <th>Description </th>
+                <th>Code Example </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tdcss"><span class="code">position <br>(static, relative, absolute, sticky) </span> </td>
+                    <td class="tdcss">CSS code that changes the default block of positioning space set by HTML. There's static (default), relative, absolute, and sticky. </td>
+                    <td class="tdcss">p {<br> position: static;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">relative position <br>(top, bottom, left, right) </span> </td>
+                    <td class="tdcss">Allows you to move an HTML element <em>relative</em> to its default position (top, bottom, left, and right). </td>
+                    <td class="tdcss">p {<br> position: relative;<br>top: 40px;<br>left: 70px;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">absolute position </span> </td>
+                    <td class="tdcss">All other elements will ignore the specified element position, even in its parent space. Doing this will remove the element from the normal document flow. </td>
+                    <td class="tdcss">p {<br> position: absolute;<br>width:50%<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">fixed position </span> </td>
+                    <td class="tdcss">Used to fix an element to a specific part of the page, often used for navigational bars. Doing this removes the element from the normal document flow. </td>
+                    <td class="tdcss">p {<br> position: fixed;<br>top:50%<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">sticky position </span> </td>
+                    <td class="tdcss">Moves an element within its fixed position/container while not removing it from the normal document flow. </td>
+                    <td class="tdcss">p {<br> position: sticky;<br>right:50%<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">z-index </span> </td>
+                    <td class="tdcss">CSS property that controls how far "forwards" or "backwards" an element will be displayed; like layers in a painting. Uses an integer value, the higher the value, the more "forward" and element will be. </td>
+                    <td class="tdcss"> h2 {<br>z-index: 3;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">display <br>(inline, block, inline-block) </span> </td>
+                    <td class="tdcss" colspan="2">Every HTML element has a default display value that dictates if it can share horizontal space with other elements. To alter this, you use inline, block, or inline-block display. </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">inline display </span> </td>
+                    <td class="tdcss">Adds a box that wraps tightly around the element, only giving it precisely the space it needs so that other elements can share horizontal space with it. <strong>NOTE: cannot be edited in CSS for size, height, and width.</strong> </td>
+                    <td class="tdcss">h1 {<br>display: inline;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">block display </span> </td>
+                    <td class="tdcss">Elements that take up the entire width of the page by default, but their width can be set in CSS. i.e., they take up their own line. </td>
+                    <td class="tdcss"> h2 {<br>display: block;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">inline-block display </span> </td>
+                    <td class="tdcss">Combines inline & block displays, and the specified elements can appear beside each other, and adjusted in CSS. </td>
+                    <td class="tdcss">h2 {<br>display: inline-block;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">float </span> </td>
+                    <td class="tdcss">a CSS property that's used for wrapping text around an image. An element can be floated left, or right. <strong>But, the element must have its width specified first.</strong> </td>
+                    <td class="tdcss">h2 {<br>float: right;<br>width: 50%;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">clear </span> </td>
+                    <td class="tdcss">CSS property that specifies how elements should interact when they bump into eachother. There's left (left sides won't touch), right, both (neither side will touch), and none (all sides can touch). </td>
+                    <td class="tdcss">h2 {<br>clear: none;<br>} </td>
+            </tbody>
+        </table>
+    <h3 class="table-title" id="boxmod">The Box Model</h3>
+        <table class="tablecss"> <!--Box Model Table Start-->
+            <thead class="thcss">
+                <th>Property/Declaration </th>
+                <th>Description </th>
+                <th>Code Example </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tdcss"><span class="code">height & width</span> </td>
+                    <td class="tdcss">CSS property that alters the amount of height & width space an HTML element takes up. </td>
+                    <td class="tdcss">p {<br>height: 20%;<br>width: 550px;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">min & max height and width</span> </td>
+                    <td class="tdcss">sets either a minimum, or maximum, height and width that an element can take up. </td>
+                    <td class="tdcss">p {<br>min-height: 40%;<br>max-width: 550px;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">border</span> </td>
+                    <td class="tdcss">A line that surrounds and element that can be altered or shown with CSS. Uses the Width (W), Style (S), and Color (C) format. </td>
+                    <td class="tdcss">p {<br>border: W (2px), S (solid), C (red);<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">border-radius</span> </td>
+                    <td class="tdcss">Used to round the edges on borders. Can be used after defining the border, or on its own. </td>
+                    <td class="tdcss">p {<br>border: W (2px), S (solid), C (red);<br>border-radius: 5px;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">padding</span> </td>
+                    <td class="tdcss">The space in between the content/elements and its border. uses a Top (T), Right (R), Bottom (B), and Left (L) model, or can be abbreviated with one number to represent all sides. </td>
+                    <td class="tdcss">p {<br>padding: 10px;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">margin</span> </td>
+                    <td class="tdcss">The space directly outside the border of an element. Decides how far away an element should be from one another. uses a TRBL model, or can be abbreviated. </td>
+                    <td class="tdcss">p {<br>margin: 10px;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">auto</span> </td>
+                    <td class="tdcss">Margin property that allows you to center content automatically </td>
+                    <td class="tdcss">p {<br>margin: auto;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">overflow</span> </td>
+                    <td class="tdcss">due to sizings and margins, elements can spill into each other (i.e., overflow). This CSS property tells the browser what to do when that happens. <strong>values: hidden, scroll, or visible.</strong> </td>
+                    <td class="tdcss">p {<br>overflow: hidden;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">resetting defaults</span> </td>
+                    <td class="tdcss">Browsers often have default margins and padding, so you target everything (*), and set them to 0, allowing you to manipulate elements as you please. </td>
+                    <td class="tdcss">* {<br>margin: 0;<br>padding: 0;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">visibility</span> </td>
+                    <td class="tdcss">Elements can be hidden from view with this property.<strong>Values: hidden, visible, collapse (collapses an element).</strong> </td>
+                    <td class="tdcss">p {<br>visibility: hidden;<br> } </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">changing the box model</span> </td>
+                    <td class="tdcss" colspan="2">The box model is effective, but sometimes you need a little more control over how much space an element takes up. Normally, everything (padding, width, border, and margin) gets added to the total element width and height, but that may cause overflow. Therefore, you can use the <strong>box-sizing</strong> CSS property to alter that. </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">content-box</span> </td>
+                    <td class="tdcss">This is the default Box Model that is set in browsers. </td>
+                    <td class="tdcss"> * {<br>box-sizing: content-box;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">border-box</span> </td>
+                    <td class="tdcss">A box model where the width and height property is the actual rendered width of an element, including its borders and any padding. <strong>Benefit: it ensures that all widths and dimensions stay consistent.</strong> </td>
+                    <td class="tdcss">* {<br>box-sizing: border-box;<br>} </td>
+                </tr>
+            </tbody>
+        </table>
+    <h3 class="table-title" id="impcss">Improved CSS</h3>
+        <table class="tablecss"> <!--Improved CSS Table Start-->
+            <thead class="thcss">
+                <th>Property/Declaration </th>
+                <th>Description </th>
+                <th>Code Example </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tdcss"><span class="code">Typography</span> </td>
+                    <td class="tdcss" colspan="2">Typography is the ancient art of arranging text on a page. Digital Typography (what we're doing right now). is a relatively new practice. </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">fonts w/ multiple words</span> </td>
+                    <td class="tdcss">When using a font with multiple words in it (e.g., Times New Roman), put the font name in single quotes (' '). </td>
+                    <td class="tdcss">* {<br>font-family: 'Times New Roman';<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">web-safe-fonts</span> </td>
+                    <td class="tdcss" colspan="2">Are a list of fonts that are already available through most web browsers and computers. Ideal for Fallback Fonts. </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">fallback fonts & Font Stacks</span> </td>
+                    <td class="tdcss">Fallback Fonts are alternative fonts that will be displayed should a computer not have your desired font. You add Fallback Fonts by creating a Font Stack (see example). Browsers will read left to right when determining what fonts to use. </td>
+                    <td class="tdcss">* {<br>font-family: 'Times New Roman', Arial, Helvetica, serif;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">alternative font-weights</span> </td>
+                    <td class="tdcss">When using the font-weight CSS property, you could use a keyword value (bold, normal, light), or, a numerical value from 1-1000. 400 is normal, 700 is bold. </td>
+                    <td class="tdcss">p {<br>font-weight: 700;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">em</span> </td>
+                    <td class="tdcss">A unit of measurement which indicates size relative to the current font size. 1em = same as current font size, 2em = twice the current font size, etc. </td>
+                    <td class="tdcss">p {<br>line-height: 1.5em;<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">line height.</span> </td>
+                    <td class="tdcss">Adjusts the height of the line of text, measured in em. </td>
+                    <td class="tdcss">p {<br>line-height: 1.5em;<br>}  </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">word spacing</span> </td>
+                    <td class="tdcss">CSS property that adds space in between words. </td>
+                    <td class="tdcss">p {<br>word-spacing: 10px;<br>}  </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">web fonts/custom fonts</span> </td>
+                    <td class="tdcss" colspan="2">Web fonts are custom fonts that you download, and may not be on most computers. Used to add a special twist to your websites. A free resource is <a href="https://fonts.google.com/" target="_blank">Google Fonts.</a></td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">web fonts with &lt;link&gt;</span> </td>
+                    <td class="tdcss">To add in a custom font, or web font, you can use &lt;link&gt; in the &lt;head&gt; section of your HTML document, then use the <span class="code">font-family</span> CSS property as you would normally. </td>
+                    <td class="tdcss">HTML:<br>&lt;head&gt;<br>&lt;link href='font url' rel='stylesheet'<br> &lt;/head&gt;<br><br> CSS:<br> p {<br>font-family: 'imported font name';<br>} </td>
+                </tr>
+                <tr>
+                    <td class="tdcss"><span class="code">web fonts with @font-face</span> </td>
+                    <td class="tdcss">You can also import custom fonts without mixing your HTML & CSS code by using the <span class="code">@font-face</span> CSS property. Start by downloading the font as above, then follow the coding example. <strong>NOTE: link your fonts in the following format order: WOFF2 -&gt; WOFF -&gt; TTP.</strong> After @font-face has been set up, simply use font-family with your custom font name to successfully import your custom font! </td>
+                    <td class="tdcss">@font-face {<br> font-family: 'insert custom font name';<br>src: url('font.woff2') format('woff2');<br>src: url('font.woff') format('woff)');<br>src url('font.ttp') format(truetype);<br>} </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
